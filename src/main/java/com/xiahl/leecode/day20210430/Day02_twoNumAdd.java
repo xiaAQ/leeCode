@@ -1,4 +1,4 @@
-package com.xiahl.leecode.day20210429;
+package com.xiahl.leecode.day20210430;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import lombok.Data;
  * <p>
  * 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
  */
-public class Day01_twoNumAdd {
+public class Day02_twoNumAdd {
     public static void main(String[] args) {
 
     }
