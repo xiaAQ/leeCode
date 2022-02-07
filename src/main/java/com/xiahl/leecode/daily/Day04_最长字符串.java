@@ -1,4 +1,4 @@
-package com.xiahl.leecode.day20210501;
+package com.xiahl.leecode.daily;
 
 
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.Map;
  * @date 2021/4/30 15:18
  * 题目:  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。看解析了.
  */
-public class MaxLongSubString {
+public class Day04_最长字符串 {
 
     public static void main(String[] args) {
         int length = lengthOfLongestSubstring("abcddfabcddef");

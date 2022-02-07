@@ -1,9 +1,7 @@
-package com.xiahl.leecode.day20210430;
+package com.xiahl.leecode.daily;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * @author xiahl
@@ -15,7 +13,7 @@ import lombok.NoArgsConstructor;
  * 思路1:存新的链表            两个链表的对应的值相加,超过10的话,向前进一,然后存入一个新的链表中 空间复杂度为O(max(a,b))
  * 思路2:存已经存在的链表中
  */
-public class Day02_twoNumAdd {
+public class Day02_两个链表相加 {
     public static void main(String[] args) {
         ListNode listNode1 = new ListNode().builder().val(2).next(new ListNode(8, new ListNode(8, new ListNode()))).build();
         ListNode listNode2 = new ListNode().builder().val(7).next(new ListNode(5, new ListNode(4, new ListNode()))).build();
@@ -40,23 +38,24 @@ public class Day02_twoNumAdd {
         return head;
 
     }
-}
 
-@Data
-@Builder
-class ListNode {
-    int val;
-    ListNode next;
+    @Data
+    @Builder
+    static
+    class ListNode {
+        int val;
+        ListNode next;
 
-    ListNode() {
-    }
+        ListNode() {
+        }
 
-    ListNode(int val) {
-        this.val = val;
-    }
+        ListNode(int val) {
+            this.val = val;
+        }
 
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }
