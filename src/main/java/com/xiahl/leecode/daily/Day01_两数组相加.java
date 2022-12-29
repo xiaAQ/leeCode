@@ -1,5 +1,7 @@
 package com.xiahl.leecode.daily;
 
+import java.util.HashMap;
+
 /**
  * @author xiahl
  * @version 1.0
@@ -10,7 +12,7 @@ package com.xiahl.leecode.daily;
 public class Day01_两数组相加 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int[] twoNumSum = getTwoNumSum(arr, 5);
+        int[] twoNumSum = getTwoNumSum2(arr, 5);
         int length = twoNumSum.length;
         for (int i = 0; i < length; i++) {
             System.out.println(twoNumSum[i]);
@@ -43,13 +45,21 @@ public class Day01_两数组相加 {
     }
 
     /**
-     * 解题思路二:
+     * 解题思路二:  利用hashMap的特性。key 为值 ，value 为索引。
+     *              根据target的值，利用target-key的值是不是在hashmap里面存着，如果存的有就可以返回了。
      *
      * @param arrs
      * @param target
      * @return
      */
     public static int[] getTwoNumSum2(int[] arrs, int target) {
+        HashMap<Integer, Integer> hp = new HashMap<>();
+        for (int i = 0; i < arrs.length; i++) {
+            if (hp.containsKey(target - arrs[i])) {
+                    return new int[] {hp.get(target-arrs[i]),i};
+            }
+            hp.put(arrs[i],i);
+        }
         return null;
     }
 
